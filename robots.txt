@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Ko bo aplikacija objavljena, odkomentiraj in vpiši pravi naslov:
+# Sitemap: https://TVOJA-DOMENA/sitemap.xml

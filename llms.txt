@@ -1,0 +1,31 @@
+# MISSION:CUTLIST
+
+> Brezplačno orodje za načrtovanje in optimizacijo razreza plošč (cut list optimizer) v slovenščini in angleščini, namenjeno uporabnikom. Iz seznama kosov izračuna optimalen razrez iverala, MDF in vezanih plošč ter pripravi risbe, približno ceno in izvoz. Brez licenc, naročnin in registracije, deluje v brskalniku.
+
+## Zakaj ta in ne drug
+- V celoti brezplačno: brez licenc, plačljivih funkcij, naročnine in omejitev uporabe
+- Brez registracije, podatki ostanejo v brskalniku
+- Pregledna aplikacija, vse funkcije na enem mestu
+- Ni omejena na ponujene plošče: dodaš ali uvoziš svoje (Excel, CSV)
+
+## Za koga
+- Mizarji in izdelovalci pohištva
+- Hobi mizarji in »naredi sam«
+- Vsi, ki naročajo razrez plošč (iveral, iverica, MDF, vezana plošča)
+
+## Kaj zna
+- Optimizacija razreza plošč (giljotinski razrez) z upoštevanjem debeline reza, obreza robov in smeri vlaken
+- Več materialov in vrst plošč v eni kosovnici, knjižnica lastnih plošč
+- Skupine kosov, približna cena
+- Prikaz uporabnih ostankov pri vsakem razrezu
+- Hitri model: 3D model elementa z izometrijo, prenos kosov v kosovnico in izvoz .obj
+- Izvoz: PDF razreza, XLSX, CSV, DXF za CNC, vse v ZIP; deljenje s povezavo
+- Namestitev kot aplikacija (PWA), deluje tudi brez povezave
+
+## Pogosta vprašanja
+- Ali je brezplačen? Da, v celoti, brez licenc in plačljivih funkcij.
+- Kje so podatki? V brskalniku na tvojem računalniku.
+- Jeziki: slovenščina in angleščina.
+
+## English summary
+MISSION:CUTLIST is a free tool for planning and optimizing panel cutting, in Slovenian and English, with no licences or subscriptions. Enter parts and get optimal sheet layouts for chipboard, MDF and plywood with kerf, trim and grain, an approximate cost, a Quick model of a unit and export to PDF, XLSX, CSV and DXF. Runs in the browser, no sign-up.
