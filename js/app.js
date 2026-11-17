@@ -2273,10 +2273,10 @@ $('#langBtn').onclick = ()=>{
   LANG = EN() ? 'sl' : 'en'; try { localStorage.setItem(LANG_KEY, LANG); } catch(_){}
   applyLang(); renderAll(); fitFloat(); syncInstall(); syncLangBtn();
 };
-// žarnica: predlagaj idejo
-function syncIdea(){ const t=L('Predlagaj idejo','Suggest an idea'), b=$('#ideaBtn'); b.dataset.tip=t; b.setAttribute('aria-label',t); $('#ideaT').textContent=t; $('#ideaP').textContent=L('Imaš idejo ali predlog za izboljšavo? Piši mi:','Got an idea or suggestion? Write to me:'); }
+// žarnica: predlagaj izboljšavo
+function syncIdea(){ const t=L('Predlagaj izboljšavo','Suggest an improvement'), b=$('#ideaBtn'); b.dataset.tip=t; b.setAttribute('aria-label',t); $('#ideaP').textContent=L('Predlagaj izboljšavo na:','Suggest an improvement at:'); }
 function closeIdea(){ $('#ideaPop').hidden=true; $('#ideaBtn').setAttribute('aria-expanded','false'); }
-$('#ideaBtn').onclick = e=>{ e.stopPropagation(); const p=$('#ideaPop'), o=p.hidden; if(!o){ closeIdea(); return; } syncIdea(); p.hidden=false; const r=$('#ideaBtn').getBoundingClientRect(); p.style.top=(r.bottom+8)+'px'; p.style.left=Math.max(16,Math.min(r.left,innerWidth-p.offsetWidth-16))+'px'; $('#ideaBtn').setAttribute('aria-expanded','true'); };
+$('#ideaBtn').onclick = e=>{ e.stopPropagation(); const p=$('#ideaPop'); if(!p.hidden){ closeIdea(); return; } tipEl.classList.remove('on'); syncIdea(); p.hidden=false; const r=$('#ideaBtn').getBoundingClientRect(); p.style.top=(r.bottom+8)+'px'; p.style.left=Math.max(16,Math.min(r.left+r.width/2-p.offsetWidth/2,innerWidth-p.offsetWidth-16))+'px'; $('#ideaBtn').setAttribute('aria-expanded','true'); };
 document.addEventListener('click', e=>{ if(!e.target.closest('#ideaPop,#ideaBtn')) closeIdea(); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeIdea(); });
 window.addEventListener('resize', closeIdea);
@@ -2284,5 +2284,7 @@ applyLang();
 syncLangBtn();
 renderAll();
 syncIdea();
+// ob odprtju strani za hip pokaži opis žarnice, kot da bi bila pod miško (le če je gumb viden)
+setTimeout(()=>{ const b=$('#ideaBtn'); if (b.offsetParent && $('#ideaPop').hidden){ showTip(b); setTimeout(()=>{ if (tipEl.textContent===b.dataset.tip) tipEl.classList.remove('on'); }, 4500); } }, 700);
 openFromLink();
 window.addEventListener('hashchange', openFromLink);
