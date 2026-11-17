@@ -888,3 +888,10 @@ dialog{border-radius:32px;padding:28px}
   dialog{border-radius:28px;padding:20px}
   .card{padding:20px}
 }
+
+/* Predlagaj idejo (žarnica) */
+.ideapop{position:fixed;z-index:80;width:260px;max-width:calc(100vw - 32px);background:var(--card);border-radius:20px;padding:16px 18px;box-shadow:0 12px 32px rgba(22,22,22,.18),0 0 0 1px var(--line);font-size:13px;line-height:1.45}
+.ideapop[hidden]{display:none}
+.ideapop b{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
+.ideapop p{margin:0 0 8px;color:var(--mute)}
+.ideapop a{color:var(--ink);font-weight:500;word-break:break-all}
