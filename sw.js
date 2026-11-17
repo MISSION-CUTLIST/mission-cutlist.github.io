@@ -1,6 +1,6 @@
 /* MISSION:CUTLIST – service worker: aplikacija se odpre tudi brez povezave.
    Ob vsaki spremembi datotek iz CORE povečaj številko v CACHE; stari predpomnilniki se ob aktivaciji izbrišejo. */
-const CACHE = 'mission-cutlist-v16';
+const CACHE = 'mission-cutlist-v17';
 const CORE = ['./', './index.html', './css/styles.css', './js/app.js', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
